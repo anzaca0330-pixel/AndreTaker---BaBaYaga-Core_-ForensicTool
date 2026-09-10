@@ -1,5 +1,7 @@
 import os
 import shutil
+import json
+import urllib.request
 from datetime import datetime, timezone
 from fastapi import FastAPI, UploadFile, File, Form, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
@@ -25,7 +27,7 @@ app = FastAPI(
 # Permitir conexiones CORS para la interfaz web local
 app.add_middleware(
     CORSMiddleware,
-    allow_origins=["*"],
+    allow_origins=["http://localhost:8000", "http://127.0.0.1:8000", "https://andretaker.org", "https://www.andretaker.org", "https://andreataker.github.io"],
     allow_credentials=True,
     allow_methods=["*"],
     allow_headers=["*"],
@@ -180,7 +182,35 @@ def activar_anti_palantir(req: APRequest):
             (res_ap["mutated_hash"], req.evidencia_id)
         )
         conn.commit()
-        database.registrar_custody_log(req.evidencia_id, "ANTI_PALANTIR_API", f"Mitigación ejecutada. Mutated Hash: {res_ap['mutated_hash']}")
-        
     conn.close()
     return res_ap
+
+class AIAnalyzeRequest(BaseModel):
+    prompt: str
+    model: str = "AndreTaker"
+
+@app.post("/api/ai/analyze")
+def ai_analyze(req: AIAnalyzeRequest):
+    """Puente API para inferencia pericial offline vía Ollama (Puerto 11434)."""
+    ollama_url = "http://127.0.0.1:11434/api/generate"
+    payload = json.dumps({
+        "model": req.model,
+        "prompt": req.prompt,
+        "stream": False
+    }).encode("utf-8")
+    
+    try:
+        url_req = urllib.request.Request(ollama_url, data=payload, headers={"Content-Type": "application/json"})
+        with urllib.request.urlopen(url_req, timeout=60) as resp:
+            data = json.loads(resp.read().decode("utf-8"))
+            return {
+                "status": "success",
+                "response": data.get("response", ""),
+                "model": req.model
+            }
+    except Exception as e:
+        return {
+            "status": "error",
+            "detail": f"Ollama offline o error de conexión al puerto 11434: {str(e)}"
+        }
+

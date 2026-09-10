@@ -21,24 +21,34 @@ class RasterAnalyzer:
             for archivo in os.listdir(temp_dir):
                 if archivo.startswith(base_name) and archivo.endswith('.png'):
                     archivo_path = os.path.join(temp_dir, archivo)
-                    resultado = subprocess.run(
-                        ['identify', '-format', '%[colorspace],%[mean],%[standard-deviation]', archivo_path],
-                        capture_output=True,
-                        text=True
-                    )
-                    
-                    output = resultado.stdout.strip()
                     colorspace = 'Desconocido'
                     mean_val = 0.0
                     std_val = 0.0
-                    
-                    if output and ',' in output:
-                        parts = output.split(',')
-                        colorspace = parts[0]
+
+                    try:
+                        resultado = subprocess.run(
+                            ['identify', '-format', '%[colorspace],%[mean],%[standard-deviation]', archivo_path],
+                            capture_output=True,
+                            text=True
+                        )
+                        output = resultado.stdout.strip()
+                        if output and ',' in output:
+                            parts = output.split(',')
+                            colorspace = parts[0]
+                            try:
+                                mean_val = float(parts[1])
+                                std_val = float(parts[2])
+                            except (ValueError, IndexError):
+                                pass
+                    except Exception:
                         try:
-                            mean_val = float(parts[1])
-                            std_val = float(parts[2])
-                        except (ValueError, IndexError):
+                            from PIL import Image, ImageStat
+                            with Image.open(archivo_path) as img:
+                                colorspace = img.mode
+                                stat = ImageStat.Stat(img)
+                                mean_val = float(stat.mean[0]) if stat.mean else 0.0
+                                std_val = float(stat.stddev[0]) if stat.stddev else 0.0
+                        except Exception:
                             pass
                     
                     imagenes.append({

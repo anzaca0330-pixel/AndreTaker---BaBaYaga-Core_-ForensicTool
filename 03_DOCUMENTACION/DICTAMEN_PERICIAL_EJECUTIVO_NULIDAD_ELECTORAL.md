@@ -1,5 +1,7 @@
 # DICTAMEN PERICIAL EJECUTIVO Y MEMORIAL TÉCNICO JUDICIAL
+
 ## DEMANDA DE NULIDAD ELECTORAL Y SUSTENTACIÓN DE MEDIDA CAUTELAR DE SUSPENSIÓN
+
 **Asunto:** Dictamen pericial detallado sobre la manipulación estructural y MUTACIÓN PROGRESIVA de archivos PDF E-14 (Uso de la Técnica de Blind Masking, Inyección de QR Sintético y Deltas XREF en Servidores) vs. Falsa percepción de "Páginas Blancas en la Web".  
 **Investigadora Principal / Perito Forense:** Andrea Zabala Cárcamo (AnZaCa / AndreTaker) — C.C. 43.925.102  
 **Autoría Científica del Descubrimiento:** Andrea Zabala Cárcamo es la **autora del descubrimiento pericial e investigativo de que la técnica computacional de *Blind Masking* fue implementada y desplegada como vector de manipulación y fraude electoral** en las Elecciones Presidenciales de Colombia 2026.  
@@ -26,9 +28,11 @@
 ## 1. ACLARACIÓN PERICIAL PREVIA: LA VERDAD TÉCNICA VS. EL MITO DE LAS "PÁGINAS BLANCAS"
 
 ### A. Autoría Exclusiva del Descubrimiento
+
 Si bien el concepto general de *Blind Masking* (enmascaramiento ciego o capas de recorte) existe en la literatura de procesamiento gráfico, **ES DE AUTORÍA EXCLUSIVA DE ANDREA ZABALA CÁRCAMO HABER DESCUBIERTO, DEMOSTRADO Y DOCUMENTADO QUE ESTA TÉCNICA FUE UTILIZADA COMO MECANISMO DE MANIPULACIÓN Y FRAUDE ELECTORAL EN COLOMBIA 2026**.
 
 ### B. Demolición del Error Conceptual del Abogado Damián
+
 El abogado Damián y los magistrados del Tribunal deben entender con total precisión que la denuncia **NO SE REFIERE A UN ERROR DE NAVEGADOR WEB NI A PÁGINAS QUE NO CARGARON EN INTERNET**:
 
 ```

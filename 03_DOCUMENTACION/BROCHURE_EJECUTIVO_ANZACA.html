@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BROCHURE EJECUTIVO — AnZaCa CyberDefense & Research</title>
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;600;700;800&family=Space+Grotesk:wght@400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --bg-primary: #0A0D14;
+            --bg-card: rgba(18, 24, 38, 0.85);
+            --accent-cyan: #00F0FF;
+            --accent-purple: #7000FF;
+            --accent-gold: #FFB800;
+            --text-main: #F0F4FF;
+            --text-muted: #8E9BAE;
+            --border-glow: rgba(0, 240, 255, 0.25);
+        }
+        * { box-sizing: border-box; margin: 0; padding: 0; }
+        body {
+            font-family: 'Outfit', sans-serif;
+            background-color: var(--bg-primary);
+            color: var(--text-main);
+            line-height: 1.6;
+            padding: 2rem;
+            background-image: radial-gradient(circle at 10% 20%, rgba(112, 0, 255, 0.15) 0%, transparent 40%),
+                              radial-gradient(circle at 90% 80%, rgba(0, 240, 255, 0.12) 0%, transparent 40%);
+        }
+        .brochure-container {
+            max-width: 1100px;
+            margin: 0 auto;
+            border: 1px solid var(--border-glow);
+            border-radius: 20px;
+            padding: 3rem;
+            background: var(--bg-card);
+            backdrop-filter: blur(16px);
+            box-shadow: 0 20px 50px rgba(0,0,0,0.6), 0 0 30px rgba(0, 240, 255, 0.1);
+        }
+        .header {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            border-bottom: 1px solid rgba(255,255,255,0.1);
+            padding-bottom: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .logo-box {
+            display: flex;
+            align-items: center;
+            gap: 1.5rem;
+        }
+        .logo-img {
+            width: 90px;
+            height: 90px;
+            border-radius: 50%;
+            border: 2px solid var(--accent-cyan);
+            box-shadow: 0 0 20px var(--accent-cyan);
+        }
+        .header-title h1 {
+            font-family: 'Space Grotesk', sans-serif;
+            font-size: 2.2rem;
+            font-weight: 700;
+            background: linear-gradient(135deg, #FFF 0%, var(--accent-cyan) 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+        }
+        .header-title p {
+            color: var(--accent-gold);
+            font-weight: 600;
+            letter-spacing: 1px;
+            font-size: 0.95rem;
+        }
+        .badge {
+            background: rgba(112, 0, 255, 0.3);
+            border: 1px solid var(--accent-purple);
+            color: #E2C5FF;
+            padding: 0.5rem 1.2rem;
+            border-radius: 50px;
+            font-size: 0.85rem;
+            font-weight: 600;
+        }
+        .grid-2 {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .card {
+            background: rgba(255,255,255,0.03);
+            border: 1px solid rgba(255,255,255,0.08);
+            border-radius: 14px;
+            padding: 1.8rem;
+            transition: transform 0.3s ease;
+        }
+        .card:hover {
+            transform: translateY(-3px);
+            border-color: var(--accent-cyan);
+        }
+        .card h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--accent-cyan);
+            font-size: 1.3rem;
+            margin-bottom: 1rem;
+            display: flex;
+            align-items: center;
+            gap: 0.6rem;
+        }
+        .card ul {
+            list-style: none;
+        }
+        .card ul li {
+            margin-bottom: 0.7rem;
+            position: relative;
+            padding-left: 1.2rem;
+            color: #D1DBEC;
+            font-size: 0.95rem;
+        }
+        .card ul li::before {
+            content: "▹";
+            position: absolute;
+            left: 0;
+            color: var(--accent-gold);
+        }
+        .pillar-box {
+            background: linear-gradient(135deg, rgba(0, 240, 255, 0.05) 0%, rgba(112, 0, 255, 0.08) 100%);
+            border: 1px solid rgba(0, 240, 255, 0.3);
+            border-radius: 16px;
+            padding: 2rem;
+            margin-bottom: 2.5rem;
+        }
+        .pillar-box h2 {
+            font-family: 'Space Grotesk', sans-serif;
+            color: var(--accent-gold);
+            font-size: 1.4rem;
+            margin-bottom: 1.2rem;
+            text-align: center;
+        }
+        .pillars-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 1.5rem;
+        }
+        .pillar-card {
+            background: rgba(10, 13, 20, 0.7);
+            border: 1px solid rgba(255,255,255,0.1);
+            border-radius: 12px;
+            padding: 1.2rem;
+            text-align: center;
+        }
+        .pillar-card h3 {
+            color: var(--accent-cyan);
+            font-size: 1.05rem;
+            margin-bottom: 0.5rem;
+        }
+        .pillar-card p {
+            font-size: 0.85rem;
+            color: var(--text-muted);
+        }
+        .footer-contact {
+            border-top: 1px solid rgba(255,255,255,0.1);
+            padding-top: 1.5rem;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            font-size: 0.9rem;
+            color: var(--text-muted);
+        }
+        .footer-contact strong { color: var(--accent-cyan); }
+        @media print {
+            body { background: white; color: black; padding: 0; }
+            .brochure-container { border: none; box-shadow: none; background: white; color: black; }
+            .card { border: 1px solid #ccc; background: #f9f9f9; color: black; }
+            .header-title h1 { -webkit-text-fill-color: black; }
+        }
+    </style>
+</head>
+<body>
+    <div class="brochure-container">
+        <div class="header">
+            <div class="logo-box">
+                <img src="andretaker_baba_yaga.png" alt="Logo AnZaCa" class="logo-img" onerror="this.src='https://via.placeholder.com/90/00f0ff/000?text=AZ'">
+                <div class="header-title">
+                    <h1>Andrea Zabala Cárcamo (AnZaCa)</h1>
+                    <p>DFIR & CYBERDEFENSE · I-O PSYCHOLOGY · DATA RESEARCH</p>
+                </div>
+            </div>
+            <div class="badge">DOSSIER PROFESIONAL 2026</div>
+        </div>
+
+        <div class="grid-2">
+            <div class="card">
+                <h2>🎓 FORMACIÓN & CREDENCIALES</h2>
+                <ul>
+                    <li><strong>University of Phoenix (EE.UU.):</strong> B.S. in Industrial-Organizational Psychology (GPA: 3.75 / 4.00 - Magna Cum Laude Level).</li>
+                    <li><strong>Universidad de Antioquia (Colombia):</strong> Psicología (120.87 Créditos Homologados). Tesis en IBM SPSS en Colegio Corvide / Fe y Alegría con Alejandro Zapata.</li>
+                    <li><strong>SENA (Colombia):</strong> Certificación en Reparación, Mantenimiento y Ensamble de Computadores.</li>
+                    <li><strong>Prácticas Clínicas:</strong> Hospital Mental de Antioquia (HOMO) y Hospital Mental de Guatapé.</li>
+                </ul>
+            </div>
+
+            <div class="card">
+                <h2>💻 NÚCLEO FORENSE & CIBERDEFENSA</h2>
+                <ul>
+                    <li><strong>BaBaYaga Core Engine:</strong> Motor pericial de procesamiento paralelo masivo (>677 GB, >147.000 documentos).</li>
+                    <li><strong>ISO/IEC 27037:2012:</strong> Cadena de custodia digital, sellado SHA-256 y preservación forense.</li>
+                    <li><strong>Inferencia Cuantitativa:</strong> Evaluación Benford 2BL, Z-Scores y decompilación de deltas XREF en PDFs.</li>
+                    <li><strong>Hardening Hardware/UEFI:</strong> Sanitización NVRAM, inmunización Exif y Protocolo Anti-Palantir (-ap).</li>
+                </ul>
+            </div>
+        </div>
+
+        <div class="pillar-box">
+            <h2>🏛️ ARQUITECTURA MODULAR DE AUDIENCIAS</h2>
+            <div class="pillars-grid">
+                <div class="pillar-card">
+                    <h3>⚖️ 1. Legal / Jurídico</h3>
+                    <p>Entregables blindados para autoridades (CIDH Medidas Cautelares, FBI IC3, CBSA). Cadena de custodia rigurosa.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>🔬 2. Técnico / Pericial</h3>
+                    <p>Análisis forense duro, decompilación binaria /FlateDecode, varianza Benford 2BL y scripts en Python/SPSS.</p>
+                </div>
+                <div class="pillar-card">
+                    <h3>🎮 3. Ciudadano / Educación</h3>
+                    <p>Juego interactivo de ciberseguridad (Escuelas + RPG Adultos por Chris & Arturo). 75.000 Testigos Digitales.</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer-contact">
+            <div>
+                <strong>Contacto Oficial:</strong> andretaker@andretaker.org
+            </div>
+            <div>
+                <strong>Portales:</strong> andretaker.org | GitHub CyberDefense Portal
+            </div>
+        </div>
+    </div>
+</body>
+</html>

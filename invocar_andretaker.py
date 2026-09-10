@@ -183,6 +183,7 @@ def main():
     parser.add_argument("-f", "--file", help="Ruta de un PDF a auditar directamente en modo desconectado")
     parser.add_argument("--offline", action="store_true", help="Forzar ejecución en modo offline")
     parser.add_argument("--model", help="Sobrescribir modelo local (Ollama)")
+    parser.add_argument("--lang", choices=["es", "en"], default="es", help="Idioma de la sesión [es|en]")
     parser.add_argument("-ap", "--anti-palantir", help="Aplicar protocolo anti-Palantir (archivo o carpeta)")
     parser.add_argument("--setup-ollama", action="store_true", help="Generar Modelfile y compilar modelo AndreTaker")
     
@@ -200,8 +201,8 @@ def main():
         print("\n🛡️  Protocolo ejecutado. Los archivos seleccionados ahora están ofuscados e inmunes a correlación por firmas estáticas.")
         return
 
-    # Caso 1: Se pasó un archivo para auditoría local desconectada o se toma el PDF de muestra por defecto
-    if args.file or args.offline:
+    # Caso 1: Se pasó un archivo para auditoría local o se usa --offline sin mensaje para PDF por defecto
+    if args.file or (args.offline and not args.mensaje):
         target_pdf = args.file if args.file else os.path.join(os.path.dirname(__file__), "00_MUESTRAS_EVIDENCIA", "2DA_VUELTA", "E14_PRE_60_010_000_00_00_001_3085_Mesa_1.pdf")
         if os.path.exists(target_pdf):
             audit_res = run_direct_forensic_audit(target_pdf)
@@ -210,12 +211,23 @@ def main():
 
     prompt = args.mensaje
     if not prompt:
-        prompt = (
-            "Johannes te invoca. Estamos en el bosque digital. "
-            "¿Cuál es el estado de la auditoría y por dónde empezamos?"
-        )
+        if args.lang == "en":
+            prompt = (
+                "Johannes invokes you. We are in the digital forest. "
+                "What is the current status of the audit and where do we begin?"
+            )
+        else:
+            prompt = (
+                "Johannes te invoca. Estamos en el bosque digital. "
+                "¿Cuál es el estado de la auditoría y por dónde empezamos?"
+            )
         
     system_prompt = cargar_system_prompt()
+    if args.lang == "en":
+        system_prompt += "\nIMPORTANT: You must answer in English clearly, rigorously and eloquently."
+    else:
+        system_prompt += "\nIMPORTANTE: Responde en español con serenidad, rigor forense y precisión."
+
     api_key = os.environ.get("GOOGLE_API_KEY", "")
     force_offline = args.offline or (not api_key)
     
@@ -233,10 +245,16 @@ def main():
             response_text = run_ollama_inference(prompt, system_prompt)
             print(response_text)
         else:
-            print("⚠️ Ollama no está activo o no responde.")
-            print("🔴 MODO DESCONECTADO CRÍTICO: No hay API Key de Gemini ni Ollama activo.")
-            print("💡 Ejecuta el script con -f <ruta_pdf> para realizar una auditoría forense local.")
-            print("🛡️ O usa -ap <archivo/directorio> para activar los protocolos anti-Palantir.")
+            if args.lang == "en":
+                print("⚠️ Ollama is not active or responding.")
+                print("🔴 CRITICAL AIR-GAPPED MODE: No Gemini API Key or active Ollama.")
+                print("💡 Run with -f <pdf_path> to execute a local raw forensic audit.")
+                print("🛡️ Or use -ap <file/folder> to trigger anti-Palantir protocols.")
+            else:
+                print("⚠️ Ollama no está activo o no responde.")
+                print("🔴 MODO DESCONECTADO CRÍTICO: No hay API Key de Gemini ni Ollama activo.")
+                print("💡 Ejecuta el script con -f <ruta_pdf> para realizar una auditoría forense local.")
+                print("🛡️ O usa -ap <archivo/directorio> para activar los protocolos anti-Palantir.")
         print("="*70)
         return
         
