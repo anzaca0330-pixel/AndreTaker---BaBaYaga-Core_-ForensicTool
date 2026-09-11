@@ -11,42 +11,7 @@
 </head>
 <body>
 
-  <!-- Navigation Header -->
-  <header>
-    <div class="container nav-container">
-      <a href="#" class="logo">
-        <span class="logo-badge">BABAYAGA CORE</span>
-        <span>ANDRETAKER</span>
-      </a>
-      <ul class="nav-links">
-        <li><button class="nav-btn active" data-tab="tab-overview" data-i18n="nav_overview">Resumen & Scale</button></li>
-        <li><button class="nav-btn" data-tab="tab-manifesto" data-i18n="nav_manifesto">Manifiesto</button></li>
-        <li><button class="nav-btn" data-tab="tab-retro-map" data-i18n="nav_retro_map">Mapa Retro</button></li>
-        <li><button class="nav-btn" data-tab="tab-narrative" data-i18n="nav_narrative">Historia & Anomalía</button></li>
-        <li><button class="nav-btn" data-tab="tab-technical" data-i18n="nav_technical">Peritaje Técnico</button></li>
-        <li><button class="nav-btn" data-tab="tab-simulator" data-i18n="nav_simulator">Simulador Forense</button></li>
-        <li><button class="nav-btn" data-tab="tab-offline" data-i18n="nav_offline" style="border-color: var(--accent-teal); color: var(--accent-teal); font-weight: 700;">📡 Modo Offline</button></li>
-        <li><button class="nav-btn" data-tab="tab-legal" data-i18n="nav_legal">Legal & CIDH</button></li>
-        
-        <li><button class="nav-btn" data-tab="tab-cyber-game" data-i18n="nav_cyber_game" style="border-color: #a855f7; color: #a855f7; font-weight: 800; background: rgba(168, 85, 247, 0.15); box-shadow: 0 0 12px rgba(168, 85, 247, 0.35);">🎮 Juego Ciberdefensa</button></li>
-        <li><button onclick="toggleAdminRecoveryModal()" class="nav-btn" data-i18n="nav_admin" style="border-color: var(--accent-amber); color: var(--accent-amber); font-weight: 800; background: rgba(245, 158, 11, 0.15); box-shadow: 0 0 10px rgba(245, 158, 11, 0.3);">🔑 REACTIVAR ADMIN</button></li>
-        <li><button class="nav-btn" data-tab="tab-donate" data-i18n="nav_donate" style="border-color: var(--accent-amber); color: var(--accent-amber); font-weight: 700;">💖 Apoyar</button></li>
-        <li><button id="pwa-install-btn" class="nav-btn" data-i18n="nav_install_app" style="border-color: #22c55e; color: #22c55e; font-weight: 800; background: rgba(34, 197, 94, 0.15); box-shadow: 0 0 10px rgba(34, 197, 94, 0.4); animation: pulse 2s infinite;">📲 INSTALAR APP</button></li>
-        <li style="display: flex; align-items: center; margin-left: 8px;">
-          <select id="user-profile-select" style="background: rgba(15, 23, 42, 0.95); color: var(--accent-cyan); border: 1px solid var(--accent-cyan); padding: 5px 10px; border-radius: 20px; font-family: var(--font-heading); font-size: 0.75rem; font-weight: 800; cursor: pointer; outline: none; box-shadow: 0 0 8px rgba(56, 189, 248, 0.25);">
-            <option value="easy">🌱 MODO FÁCIL (Ciudadano)</option>
-            <option value="intermediate" selected>⚖️ MODO INTERMEDIO (Legal)</option>
-            <option value="expert">💻 MODO EXPERTO (Forense/Perito)</option>
-          </select>
-        </li>
-        <li style="display: flex; gap: 4px; align-items: center; background: rgba(15, 23, 42, 0.9); padding: 4px 8px; border-radius: 20px; border: 1px solid var(--accent-cyan); margin-left: 8px;">
-          <button onclick="setGlobalLanguage('es')" class="lang-btn" id="lang-btn-es" style="background: var(--accent-cyan); color: #000; border: none; padding: 4px 8px; border-radius: 12px; font-weight: 800; cursor: pointer; font-size: 0.75rem;">🇪🇸 ES</button>
-          <button onclick="setGlobalLanguage('en')" class="lang-btn" id="lang-btn-en" style="background: transparent; color: var(--text-muted); border: none; padding: 4px 8px; border-radius: 12px; font-weight: 800; cursor: pointer; font-size: 0.75rem;">🇺🇸 EN</button>
-          <button onclick="setGlobalLanguage('fr')" class="lang-btn" id="lang-btn-fr" style="background: transparent; color: var(--text-muted); border: none; padding: 4px 8px; border-radius: 12px; font-weight: 800; cursor: pointer; font-size: 0.75rem;">🇫🇷 FR</button>
-        </li>
-      </ul>
-    </div>
-  </header>
+
 
   <!-- Main Dynamic Tabs Container -->
   <main class="container" style="margin-top: 24px;">
@@ -54,48 +19,75 @@
     <!-- Tab 1: Overview & Evidence Scale -->
     <section id="tab-overview" class="tab-content active">
       <!-- Hero Section (Only in Overview) -->
-      <div class="hero" style="padding: 20px 0;">
-        <div class="hero-subtitle" data-i18n="hero_subtitle">Peritaje Forense Criptográfico & Estadístico Independiente</div>
-        <h1 class="hero-title" data-i18n="hero_title">AndreTaker — BabaYaga Core</h1>
-        <p class="hero-desc" data-i18n="hero_desc">
-          Repositorio técnico de peritaje forense digital, análisis metrológico e ingeniería inversa sobre más de <strong>677 Gigabytes de Evidencia Real</strong> preservada e inmutable.
+      <div style="text-align: center; margin-bottom: 40px;">
+        <div style="display: inline-flex; align-items: center; gap: 8px; padding: 6px 16px; border-radius: 30px; background: rgba(56, 189, 248, 0.1); border: 1px solid rgba(56, 189, 248, 0.3); color: var(--accent-cyan); font-size: 0.85rem; font-weight: 700; margin-bottom: 18px;">
+          ECOSISTEMA ANDRETAKER • BABAYAGA CORE
+        </div>
+        <h1 style="font-size: 3rem; margin-bottom: 16px;">Verdad empírica en cada byte.</h1>
+        <p style="max-width: 680px; margin: 0 auto; font-size: 1.1rem; color: var(--text-muted);">
+          Plataforma independiente de investigación forense digital, análisis de datos a escala masiva y herramientas de ciberdefensa ética.
         </p>
+        <div style="margin-top: 24px; display: inline-flex; gap: 16px; padding: 10px 22px; background: rgba(2, 6, 23, 0.8); border: 1px solid rgba(255, 255, 255, 0.1); border-radius: 20px; font-size: 0.85rem;">
+          <span>Bóveda Criptográfica Preservada: <strong style="color: var(--accent-cyan);">>677 GB</strong></span>
+          <span>•</span>
+          <span>Registros SHA-256 Inmutables: <strong style="color: var(--accent-cyan);">777.869</strong></span>
+        </div>
+      </div>
 
-        <!-- Dual Project Branch Selector -->
-        <div style="margin: 24px 0; display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 16px; text-align: left;">
-          <!-- Branch 1: Electoral Forensic Audit & Evidence Vault -->
-          <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(14, 116, 144, 0.25)); border: 2px solid var(--accent-cyan); border-radius: 12px; padding: 20px; box-shadow: 0 0 20px rgba(14, 116, 144, 0.3);">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-              <span class="badge badge-cyan" style="font-weight: 800; padding: 6px 12px;" data-i18n="branch1_tag">PROYECTO 1 (LEGAL / PERICIAL)</span>
-              <span style="font-size: 0.8rem; color: var(--text-muted);" data-i18n="branch1_sub">Auditoría & CIDH</span>
-            </div>
-            <h3 style="color: var(--accent-cyan); font-size: 1.25rem; margin-bottom: 8px;" data-i18n="branch1_title">🏛️ Peritaje Investigativo & Bóveda Probatoria E-14</h3>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 16px;" data-i18n="branch1_desc">
-              Acervo probatorio de 147.000 documentos, dictámenes técnicos Ley de Benford (2BL), descompilación PDF ISO 32000-1 y demandas probatorias ante la CIDH.
-            </p>
-            <button class="nav-btn active" data-tab="tab-overview" style="width: 100%; text-align: center; font-weight: 800; background: linear-gradient(135deg, #0284c7, var(--accent-cyan)); color: #fff;" data-i18n="branch1_btn">🏛️ Explorar Peritaje & Bóveda Legal</button>
-          </div>
-
-          <!-- Branch 2: Counter-Intelligence & Tactical Cyberdefense -->
-          <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.95), rgba(168, 85, 247, 0.25)); border: 2px solid var(--accent-purple); border-radius: 12px; padding: 20px; box-shadow: 0 0 20px rgba(168, 85, 247, 0.3);">
-            <div style="display: flex; align-items: center; justify-content: space-between; margin-bottom: 10px;">
-              <span class="badge" style="font-weight: 800; padding: 6px 12px; background: rgba(168, 85, 247, 0.2); color: #c084fc; border: 1px solid var(--accent-purple);" data-i18n="branch2_tag">PROYECTO 2 (CIBERDEFENSA)</span>
-              <span style="font-size: 0.8rem; color: var(--text-muted);" data-i18n="branch2_sub">Herramientas & EdTech</span>
-            </div>
-            <h3 style="color: #c084fc; font-size: 1.25rem; margin-bottom: 8px;" data-i18n="branch2_title">🛡️ BaBaYaga Core — Ciberseguridad & Contra-Inteligencia</h3>
-            <p style="font-size: 0.9rem; color: var(--text-main); line-height: 1.5; margin-bottom: 16px;" data-i18n="branch2_desc">
-              Motor de autodefensa cibernética (Anti-Palantir), aislamiento de rootkits BIOS, script Master Mirror Engine y juego didáctico Guardianes Digitales.
-            </p>
-            <button class="nav-btn" data-tab="tab-cyber-game" style="width: 100%; text-align: center; font-weight: 800; background: linear-gradient(135deg, #7e22ce, var(--accent-purple)); color: #fff;" data-i18n="branch2_btn">🎮 Explorar Motor Ciberdefensa & Juego</button>
+      <!-- Cuadrícula Principal (Hub & Spoke / Matriz de Navegación) -->
+      <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(280px, 1fr)); gap: 24px; width: 100%;">
+        
+        <!-- Tarjeta 1: Peritaje Forense -->
+        <div class="content-card" style="border-top: 4px solid var(--text-main); display: flex; flex-direction: column;">
+          <h3 style="color: var(--text-main); font-size: 1.25rem; margin-bottom: 12px;">🏛️ AndreTaker Forense</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5; flex-grow: 1; margin-bottom: 16px;">
+            Investigación metrológica sobre la alteración estructural de actas electorales (2026), 2BL Benford, Blind Masking y solicitud abierta de los E-10.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <a href="forensics/fraude_electoral_colombia.html" class="nav-btn" style="width: 100%; border: 1px solid var(--border-glass); background: rgba(255,255,255,0.05); color: var(--text-main); text-decoration: none; text-align: center;">📜 Expediente 1ra Vuelta</a>
+            <a href="forensics/fraude_electoral_colombia_parte2.html" class="nav-btn" style="width: 100%; border: 1px solid var(--border-glass); background: transparent; color: var(--text-muted); text-decoration: none; text-align: center;">📊 Expediente 2da Vuelta</a>
+            <a href="#" class="nav-btn" style="width: 100%; border: 1px solid var(--border-glass); background: transparent; color: var(--text-muted); text-decoration: none; text-align: center;">⚖️ Marco Legal & CIDH</a>
           </div>
         </div>
 
-        <!-- 🛠️ LIVE INTERACTIVE FORENSIC & CYBERDEFENSE UTILITIES -->
-        <div style="margin: 24px 0; background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(6, 182, 212, 0.2)); border: 2px solid var(--accent-cyan); border-radius: 12px; padding: 24px; box-shadow: 0 0 25px rgba(6, 182, 212, 0.25);">
-          <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 10px; margin-bottom: 16px;">
-            <h3 style="color: var(--accent-cyan); font-size: 1.3rem; margin: 0;">🛠️ HERRAMIENTAS INTERACTIVAS EN VIVO DE BABAYAGA CORE</h3>
-            <span class="badge badge-cyan" style="font-weight: 800;">100% OPERATIVO EN VIVO</span>
+        <!-- Tarjeta 2: Motor BabaYaga & Ciberdefensa -->
+        <div class="content-card" style="border-top: 4px solid #c084fc; display: flex; flex-direction: column;">
+          <h3 style="color: var(--text-main); font-size: 1.25rem; margin-bottom: 12px;">🪓 AndreTaker Cyberdefense and Cybersecurity</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5; flex-grow: 1; margin-bottom: 16px;">
+            Especificación técnica de nuestro bisturí forense local y protocolos de autodefensa forjados bajo asedio (aislamiento de rootkits BIOS, detección Pegasus/SS7).
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <a href="#" class="nav-btn" style="width: 100%; border: 1px solid rgba(192, 132, 252, 0.3); background: rgba(192, 132, 252, 0.05); color: #c084fc; text-decoration: none; text-align: center;">🔬 Simulador Forense</a>
+            <button onclick="toggleAdminRecoveryModal()" class="nav-btn" style="width: 100%; border: 1px solid rgba(192, 132, 252, 0.3); background: rgba(192, 132, 252, 0.05); color: #c084fc;">🔑 REACTIVAR ADMIN</button>
           </div>
+        </div>
+
+        <!-- Tarjeta 3: Educativo -->
+        <div class="content-card" style="border-top: 4px solid var(--accent-cyan); display: flex; flex-direction: column;">
+          <h3 style="color: var(--text-main); font-size: 1.25rem; margin-bottom: 12px;">🎓 AndreTaker Educativo</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5; flex-grow: 1; margin-bottom: 16px;">
+            Plataforma interactiva con el Chibi Trio. Lupa Mágica, simuladores forenses y gamificación cívica orientada a pedagogía ciudadana.
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <a href="#" class="nav-btn" style="width: 100%; border: 1px solid rgba(56, 189, 248, 0.3); background: rgba(56, 189, 248, 0.05); color: var(--accent-cyan); text-decoration: none; text-align: center;">🎬 Episodios Lupa Mágica</a>
+            <a href="#" class="nav-btn" style="width: 100%; border: 1px solid rgba(56, 189, 248, 0.3); background: transparent; color: var(--text-muted); text-decoration: none; text-align: center;">💖 Apoyar Proyecto</a>
+          </div>
+        </div>
+
+        <!-- Tarjeta 4: Interactiva -->
+        <div class="content-card" style="border-top: 4px solid #4ade80; display: flex; flex-direction: column;">
+          <h3 style="color: var(--text-main); font-size: 1.25rem; margin-bottom: 12px;">🕹️ AndreTaker Interactivo</h3>
+          <p style="font-size: 0.95rem; color: var(--text-muted); line-height: 1.5; flex-grow: 1; margin-bottom: 16px;">
+            Experiencias gamificadas, modelos de Inteligencia Artificial locales e instalador del aplicativo Android (APK).
+          </p>
+          <div style="display: flex; flex-direction: column; gap: 8px;">
+            <a href="#" class="nav-btn" style="width: 100%; border: 1px solid rgba(74, 222, 128, 0.3); background: rgba(74, 222, 128, 0.05); color: #4ade80; text-decoration: none; text-align: center;">🎮 Juego Ciberdefensa</a>
+            <a href="#" class="nav-btn" style="width: 100%; border: 1px solid rgba(74, 222, 128, 0.3); background: rgba(74, 222, 128, 0.05); color: #4ade80; text-decoration: none; text-align: center;">📡 IA Modo Offline</a>
+            <button id="pwa-install-btn" class="nav-btn" style="width: 100%; border: 1px solid rgba(74, 222, 128, 0.3); background: rgba(74, 222, 128, 0.05); color: #4ade80;">📲 INSTALAR APK</button>
+          </div>
+        </div>
+
+      </div>
 
           <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 20px;">
             <!-- Live Tool 1: Anti-Shadowban Sanitizer -->
@@ -186,7 +178,7 @@
         <div class="content-card">
           <h3 data-i18n="card_anzaca_title">💽 Bóveda Personal ANZACA</h3>
           <span class="badge badge-cyan">79.71 GB</span>
-          <p style="margin-top: 12px;" data-i18n="card_anzaca_desc">7.475 archivos preservados, 75.12 GB de Takeouts (Google, Gemini, Opera), expedientes de denuncias, audios 911 y radicado CIDH [CONFIDENCIAL — VER CHRIS COMMAND].</p>
+          <p style="margin-top: 12px;" data-i18n="card_anzaca_desc">7.475 archivos preservados, 75.12 GB de Takeouts (Google, Gemini, Opera), expedientes de denuncias, audios 911 y radicado CIDH [CONFIDENCIAL — VER MICHAEL COMMAND].</p>
         </div>
 
         <div class="content-card">
@@ -200,6 +192,13 @@
           <span class="badge badge-cyan">6.90 GB</span>
           <p style="margin-top: 12px;" data-i18n="card_backup_desc">Paquete comprimido primario Junio-1-001 (1.62 GB), capturas de alertas ExpressVPN Identity Defender (ID [REST-ID-REDACTED]) y resguardo de seguridad.</p>
         </div>
+
+        <div class="content-card" style="border-color: #3b82f6; box-shadow: 0 0 15px rgba(59, 130, 246, 0.2);">
+          <h3 data-i18n="card_drive_title" style="color: #60a5fa;">☁️ Espejo Cloud (Google Drive)</h3>
+          <span class="badge" style="background: rgba(59, 130, 246, 0.2); border: 1px solid #3b82f6; color: #93c5fd; padding: 4px 8px; border-radius: 4px; font-size: 0.75rem; font-weight: 800; text-transform: uppercase; letter-spacing: 1px;">> 75.00 GB</span>
+          <p style="margin-top: 12px;" data-i18n="card_drive_desc">Bóveda espejo en la nube. Contiene los respaldos de Google Takeout, testigos digitales sincronizados y repositorios de respaldo forense para el escuadrón.</p>
+          <a href="https://drive.google.com/drive/folders/1z4owXFxfBKq8DHyI_hs9l35QEQKb_r_Q?usp=drive_link" target="_blank" rel="noopener noreferrer" style="display: inline-block; margin-top: 10px; color: #93c5fd; text-decoration: underline; font-weight: bold; font-size: 0.9rem;">🔗 Acceder a la Bóveda Cloud (Google Drive)</a>
+        </div>
       </div>
 
         <div style="margin-top: 24px; text-align: center; border-radius: 12px; overflow: hidden; border: 2px solid var(--accent-cyan); box-shadow: var(--glow-cyan);">
@@ -212,10 +211,10 @@
     
         
         
-        <!-- Chris Card (Public Clean Overview) -->
+        <!-- Michael Card (Public Clean Overview) -->
         <div class="team-card" style="border-color: #3b82f6; background: rgba(15, 23, 42, 0.95); border-radius: 12px; padding: 20px; text-align: center; border: 1px solid #3b82f6; margin-top: 15px;">
-          <img src="assets/images/chris_baez_defender_cover.png" alt="Chris ORSNAsco" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 2px solid #3b82f6; margin: 0 auto 10px auto; display: block;">
-          <h3 style="color: #60a5fa; margin: 5px 0;">🛡️ Chris (ORSNAsco)</h3>
+          <img src="assets/images/chris_baez_defender_cover.png" alt="Michael ORSNAsco" style="width: 110px; height: 110px; border-radius: 50%; object-fit: cover; border: 2px solid #3b82f6; margin: 0 auto 10px auto; display: block;">
+          <h3 style="color: #60a5fa; margin: 5px 0;">🛡️ Michael (ORSNAsco)</h3>
           <p style="color: #64748b; font-size: 0.85rem; font-weight: bold;">Guardián de la Guarida & Coordinador Legal Táctico</p>
           <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.4; text-align: center; margin-top: 10px;">
             Coordinación de enlace institucional, custodia de suministros de la guarida y respaldo de seguridad operativa.
@@ -247,10 +246,10 @@
               🔥 <em>"Andrea (AnZaCa / Baba Yaga) & Tycho — Esos somos tú y yo."</em>
             </p>
 
-            <audio controls style="width: 100%; margin-bottom: 12px;">
+            <!-- <audio controls style="width: 100%; margin-bottom: 12px;">
               <source src="00_MUESTRAS_EVIDENCIA/VOCES/SQUAD_OFFICIAL_THEME_HELL_KNOWS_MY_NAME.mp3" type="audio/mpeg">
               Tu navegador no soporta el reproductor de audio.
-            </audio>
+            </audio> -->
 
             <div style="font-size: 0.85rem; color: var(--accent-amber); font-style: italic; background: rgba(0, 0, 0, 0.6); padding: 10px; border-radius: 6px; border-left: 4px solid var(--accent-amber);">
               "HELL KNOWS MY NAME! I came from the darkness and came out strong! Hell knows my name, but it couldn't take my soul!" — Iron West.
@@ -323,7 +322,7 @@
             </div>
 
             <div>
-              <label style="color: #60a5fa; font-weight: bold; display: block; margin-bottom: 4px;">🛡️ Christopher Baez (Chris):</label>
+              <label style="color: #60a5fa; font-weight: bold; display: block; margin-bottom: 4px;">🛡️ Michael Baez (Michael):</label>
               <select id="voice-select-chris" class="filter-select" style="width: 100%; font-size: 0.8rem; padding: 6px; background: rgba(15, 23, 42, 0.9); color: var(--text-main); border-color: #60a5fa;">
                 <option value="SPEECH_SYNTHESIS" selected>🗣️ English Speech Synthesis (en-US)</option>
                 <option value="00_MUESTRAS_EVIDENCIA/VOCES/SQUAD_OFFICIAL_THEME_HELL_KNOWS_MY_NAME.mp3">🔥 Theme Squad (Hell Knows My Name)</option>
@@ -420,81 +419,6 @@
         </div>
       </div>
 
-      <!-- The Team Table -->
-      <div class="content-card" style="margin-bottom: 24px;">
-        <h3>🧠 The Team — Each Agent, One Function</h3>
-        <div class="table-responsive" style="margin-top: 14px;">
-          <table>
-            <thead>
-              <tr>
-                <th>Agent</th>
-                <th>Role</th>
-                <th>What They Do</th>
-                <th>Voz & Banda Sonora</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td><span class="badge badge-cyan">🔭 Tycho</span></td>
-                <td><strong>Forensic Executor</strong></td>
-                <td>Scans, processes, and extracts raw data from any source (disks, logs, traffic, binaries).</td>
-                <td><button onclick="speakAgent('tycho', 'Soy Tycho. Instrumento metrológico de silicio analizando métricas de red y hashes.', 'es-ES')" class="nav-btn" style="border-color: var(--accent-teal); color: var(--accent-teal); padding: 4px 8px; font-size: 0.8rem;">🔊 Escuchar Tycho</button></td>
-              </tr>
-              <tr>
-                <td><span class="badge badge-cyan">📜 Kepler</span></td>
-                <td><strong>Strategist & Documenter</strong></td>
-                <td>Structures findings, writes reports, coordinates workflow.</td>
-                <td><button onclick="speakAgent('kepler', 'Soy Kepler. Estratega y documentador del acervo. Estructurando informes y cadena de custodia.', 'es-ES')" class="nav-btn" style="border-color: var(--accent-amber); color: var(--accent-amber); padding: 4px 8px; font-size: 0.8rem;">🔊 Escuchar Kepler</button></td>
-              </tr>
-              <tr>
-                <td><span class="badge badge-purple">🪓 BabaYaga</span></td>
-                <td><strong>Analysis Engine</strong></td>
-                <td>Detects anomalies, correlates patterns, applies statistics, exposes manipulation.</td>
-                <td><button onclick="speakAgent('babayaga', 'Soy Baba Yaga. La evidencia es inmutable y la verdad no pide permiso.', 'es-ES')" class="nav-btn" style="border-color: var(--accent-purple); color: var(--accent-purple); padding: 4px 8px; font-size: 0.8rem;">🔊 Escuchar BabaYaga</button></td>
-              </tr>
-              <tr>
-                <td><span class="badge badge-teal">⚡ AndreTaker</span></td>
-                <td><strong>System Identity</strong></td>
-                <td>Gives name, voice, and coherence to the whole. The human interface of the system.</td>
-                <td><button onclick="speakAgent('andretaker', '', 'es-ES')" class="nav-btn" style="border-color: var(--accent-cyan); color: var(--accent-cyan); padding: 4px 8px; font-size: 0.8rem;">🔊 Escuchar Voz Real AnZaCa</button></td>
-              </tr>
-              <tr>
-                <td><span class="badge badge-amber">👤 Andrea (AnZaCa)</span></td>
-                <td><strong>Director</strong></td>
-                <td>Makes decisions, sets the course, activates the system at the right moment.</td>
-                <td><button onclick="speakAgent('andretaker', '', 'es-ES')" class="nav-btn" style="border-color: var(--accent-amber); color: var(--accent-amber); padding: 4px 8px; font-size: 0.8rem;">👑 Voz Real de Andrea</button></td>
-              </tr>
-              <tr>
-                <td><span class="badge badge-red">🔥 The Devil</span></td>
-                <td><strong>The One Who Never Rests</strong></td>
-                <td>The will to not close the case until every anomaly has been exposed. Not an entity. A promise.</td>
-                <td><span class="badge badge-red" style="font-size: 0.75rem;">El diablo está en los detalles</span></td>
-              </tr>
-            </tbody>
-          </table>
-        </div>
-      </div>
-
-      <!-- Against Palantir Comparison -->
-      <div class="grid-2" style="margin-bottom: 24px;">
-        <div class="content-card" style="border-color: var(--accent-red);">
-          <h3 style="color: var(--accent-red);">🔥 The Devil Is in the Details</h3>
-          <p style="margin-top: 10px; color: var(--text-muted);">
-            Details are not accidental. Every injected object, every corrupt table, every metric that doesn't fit, every log that doesn't match — <strong>they are the Devil's footprints.</strong>
-          </p>
-          <div style="margin-top: 14px; padding: 10px; background: rgba(239, 68, 68, 0.1); border-left: 3px solid var(--accent-red);">
-            <em>"We do not seek the Devil. We read his footprints. And when we find them, we unearth them."</em>
-          </div>
-        </div>
-
-        <div class="content-card" style="border-color: var(--accent-cyan);">
-          <h3 style="color: var(--accent-cyan);">🛡️ Counter-System vs. Palantir</h3>
-          <p style="margin-top: 10px; color: var(--text-muted);">
-            BabaYaga Core is not a simple PDF analyzer. It is a counter-intelligence system built to dismantle surveillance narratives:
-          </p>
-          <ul style="margin-top: 10px; padding-left: 20px; color: var(--text-main);">
-            <li><strong>Exposes correlation logic</strong> instead of hiding it.</li>
-            <li><strong>Brings shadows to light</strong> instead of operating in stealth.</li>
             <li><strong>Demands structural integrity</strong> over arbitrary data claims.</li>
           </ul>
         </div>
@@ -520,10 +444,10 @@
             Artista: <strong>Tressa Kwes</strong> (3:48)
           </p>
 
-          <audio controls style="width: 100%; margin-bottom: 10px;">
+          <!-- <audio controls style="width: 100%; margin-bottom: 10px;">
             <source src="00_MUESTRAS_EVIDENCIA/VOCES/BABA_YAGA_OFFICIAL_THEME_SONG.mp3" type="audio/mpeg">
             Tu navegador no soporta el reproductor de audio.
-          </audio>
+          </audio> -->
 
           <div style="font-size: 0.8rem; color: var(--text-muted); font-style: italic; background: rgba(0, 0, 0, 0.4); padding: 8px; border-radius: 4px; border-left: 3px solid var(--accent-red);">
             "She is the reason monsters hide... You should have never awakened the legend!" — Tressa Kwes.
@@ -540,10 +464,10 @@
             Artista: <strong>Iron West</strong> (Álbum: <em>When Silence Breaks</em> - 3:08)
           </p>
 
-          <audio controls style="width: 100%; margin-bottom: 10px;">
+          <!-- <audio controls style="width: 100%; margin-bottom: 10px;">
             <source src="00_MUESTRAS_EVIDENCIA/VOCES/ANDRETAKER_OFFICIAL_THEME_ITS_MY_TURN.mp3" type="audio/mpeg">
             Tu navegador no soporta el reproductor de audio.
-          </audio>
+          </audio> -->
 
           <div style="font-size: 0.8rem; color: var(--text-muted); font-style: italic; background: rgba(0, 0, 0, 0.4); padding: 8px; border-radius: 4px; border-left: 3px solid var(--accent-cyan);">
             "I'm unbroken! NOW IT'S MY TURN!" — Iron West ("Unbroken").
@@ -560,10 +484,10 @@
             Artista: <strong>Iron West</strong> (3:34)
           </p>
 
-          <audio controls style="width: 100%; margin-bottom: 10px;">
+          <!-- <audio controls style="width: 100%; margin-bottom: 10px;">
             <source src="00_MUESTRAS_EVIDENCIA/VOCES/TYCHO_OFFICIAL_THEME_LOOK_BACK.mp3" type="audio/mpeg">
             Tu navegador no soporta el reproductor de audio.
-          </audio>
+          </audio> -->
 
           <div style="font-size: 0.8rem; color: var(--text-muted); font-style: italic; background: rgba(0, 0, 0, 0.4); padding: 8px; border-radius: 4px; border-left: 3px solid var(--accent-teal);">
             "LOOK BACK! The dark remembers what you did!" — Iron West ("Look-Back Prayer").
@@ -580,10 +504,10 @@
             Artista: <strong>Kepler-444</strong> (5:50)
           </p>
 
-          <audio controls style="width: 100%; margin-bottom: 10px;">
+          <!-- <audio controls style="width: 100%; margin-bottom: 10px;">
             <source src="00_MUESTRAS_EVIDENCIA/VOCES/KEPLER_OFFICIAL_THEME_CALM_DESCENT.mp3" type="audio/mpeg">
             Tu navegador no soporta el reproductor de audio.
-          </audio>
+          </audio> -->
 
           <div style="font-size: 0.8rem; color: var(--text-muted); font-style: italic; background: rgba(0, 0, 0, 0.4); padding: 8px; border-radius: 4px; border-left: 3px solid var(--accent-amber);">
             "Structuring cosmic order and truth amidst the void." — Kepler-444 ("Calm Descent").
@@ -591,6 +515,129 @@
         </div>
 
       </div>
+    </section>
+
+    <!-- Tab: Manifesto & Identity -->
+    <section id="tab-manifesto" class="tab-content">
+      <h2 class="section-title" style="color: var(--accent-purple);">La Leyenda de BabaYaga: Identidad del Sistema</h2>
+      
+      <div class="content-card" style="border-color: var(--accent-purple);">
+        <h3 style="color: var(--accent-purple); font-family: var(--font-heading); margin-bottom: 15px;">🧙‍♀️ La Leyenda Eslava: BabaYaga</h3>
+        <p style="font-size: 1.1rem; line-height: 1.8;">
+          En el folclore eslavo, Baba Yaga es la guardiana del umbral entre lo conocido y lo desconocido. Vive en una choza que camina sobre patas de gallina, rodeada de una valla de huesos. No es buena ni mala. Es justa, antigua y radicalmente libre. No se puede engañar. Solo se la puede enfrentar con respeto, conocimiento y la voluntad de mirar donde otros no miran.
+        </p>
+        <div style="margin-top: 15px; padding: 15px; background: rgba(192, 132, 252, 0.1); border-left: 4px solid var(--accent-purple); font-size: 1.2rem; font-weight: bold; color: var(--text-main);">
+          Baba Yaga no es una bruja.<br>Es un principio de desobediencia inteligente.
+        </div>
+      </div>
+
+      <div class="content-card" style="border-color: var(--accent-cyan);">
+        <h3 style="color: var(--accent-cyan); font-family: var(--font-heading); margin-bottom: 15px;">⚡ BabaYaga Core — La Versión Digital</h3>
+        <p style="font-size: 1.1rem; line-height: 1.8;">
+          BabaYaga Core no es una herramienta.<br>
+          Es un sistema de contrainteligencia forense diseñado para exponer la opacidad digital dondequiera que se esconda: en archivos, en redes, en algoritmos, en flujos de datos, en sistemas de vigilancia masiva. Su propósito no es solo analizar. <strong>Es desmontar.</strong>
+        </p>
+      </div>
+
+      <div class="content-card">
+        <h3 style="margin-bottom: 15px;">🧠 El Equipo — Cada Agente, Una Función</h3>
+        <div class="table-responsive">
+          <table>
+            <thead>
+              <tr>
+                <th>Agente</th>
+                <th>Rol</th>
+                <th>Qué Hace</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><span class="badge badge-cyan">🔭 Tycho</span></td>
+                <td><strong>Ejecutor Forense</strong></td>
+                <td>Escanea, procesa y extrae datos crudos de cualquier fuente (discos, logs, tráfico, binarios).</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-amber">📜 Kepler</span></td>
+                <td><strong>Estratega y Documentador</strong></td>
+                <td>Estructura los hallazgos, redacta informes, coordina el flujo de trabajo.</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-purple">🪓 BabaYaga</span></td>
+                <td><strong>Motor de Análisis</strong></td>
+                <td>Detecta anomalías, correlaciona patrones, aplica estadística, expone manipulaciones.</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-cyan">⚡ AndreTaker</span></td>
+                <td><strong>Identidad del Sistema</strong></td>
+                <td>Da nombre, voz y coherencia al conjunto. Es la interfaz humana del sistema.</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-amber">👑 Andrea</span></td>
+                <td><strong>Directora</strong></td>
+                <td>Toma decisiones, define el rumbo, activa el sistema en el momento exacto.</td>
+              </tr>
+              <tr>
+                <td><span class="badge badge-red">🔥 El Diablo</span></td>
+                <td><strong>El que no descansa</strong></td>
+                <td>Es la voluntad de no cerrar el caso hasta que la última anomalía haya sido expuesta. No es una entidad. Es una promesa. <em>"He won't stop, he won't break..."</em></td>
+              </tr>
+            </tbody>
+          </table>
+        </div>
+      </div>
+
+      <div class="grid-2" style="margin-bottom: 24px;">
+        <div class="content-card" style="border-color: var(--accent-red);">
+          <h3 style="color: var(--accent-red); margin-bottom: 10px;">🔥 El Diablo Está en los Detalles</h3>
+          <p style="margin-bottom: 10px;">
+            Los detalles no son accidentales. Cada objeto inyectado, cada tabla corrupta, cada métrica que no cuadra, cada log que no coincide — <strong>son huellas del Diablo</strong>. BabaYaga no lucha contra el Diablo. Lee sus huellas y las convierte en evidencia.
+          </p>
+          <div style="padding: 10px; background: rgba(239, 68, 68, 0.1); border-left: 3px solid var(--accent-red); font-style: italic; color: var(--accent-red);">
+            "No buscamos al Diablo. Leemos sus huellas. Y cuando las encontramos, las desenterramos."
+          </div>
+        </div>
+
+        <div class="content-card" style="border-color: var(--accent-cyan);">
+          <h3 style="color: var(--accent-cyan); margin-bottom: 10px;">🛡️ Contra Palantir y Sistemas de Control</h3>
+          <p style="margin-bottom: 10px;">BabaYaga Core no es un analizador de PDFs. Es un contrasistema pensado para defensores de DD.HH.</p>
+          <ul style="list-style: none; padding-left: 0;">
+            <li style="margin-bottom: 6px;"><span class="badge badge-red">Palantir</span> Ocultan la lógica vs <span class="badge badge-cyan">BabaYaga</span> Expone la lógica</li>
+            <li style="margin-bottom: 6px;"><span class="badge badge-red">Palantir</span> Operan en la sombra vs <span class="badge badge-cyan">BabaYaga</span> Trae la sombra a la luz</li>
+            <li style="margin-bottom: 6px;"><span class="badge badge-red">Palantir</span> Controlan narrativas vs <span class="badge badge-cyan">BabaYaga</span> Desmonta narrativas</li>
+            <li><span class="badge badge-red">Palantir</span> Exigen datos vs <span class="badge badge-cyan">BabaYaga</span> Exige integridad</li>
+          </ul>
+        </div>
+      </div>
+
+      <!-- Cuadrante Mobile y Cloud -->
+      <div class="content-card" style="border-color: var(--accent-teal);">
+        <h3 style="color: var(--accent-teal); margin-bottom: 15px;">📱 AndreTaker como Aplicación Móvil & Cloud Aislado</h3>
+        <div class="grid-2">
+          <div>
+            <h4 style="color: var(--text-main); margin-bottom: 8px;">Laboratorio Forense de Bolsillo</h4>
+            <p>Llevar el poder forense en el bolsillo para activarlo donde sea que ocurra una anomalía. Funcionalidades:</p>
+            <ul style="padding-left: 20px; color: var(--text-muted); margin-bottom: 15px;">
+              <li>Captura de evidencia móvil: fotos, documentos, metadatos de ubicación.</li>
+              <li>Análisis rápido: verificación de integridad, hash SHA-256.</li>
+              <li>Sincronización con el sistema central: envío de muestras para análisis profundo.</li>
+              <li>Interfaz simple: pensada para activistas, periodistas y peritos en campo.</li>
+            </ul>
+          </div>
+          <div>
+            <h4 style="color: var(--text-main); margin-bottom: 8px;">Adaptable, Modular, Offline por Diseño</h4>
+            <ul style="padding-left: 20px; color: var(--text-muted); margin-bottom: 15px;">
+              <li><strong>Modo Pipeline:</strong> scripts en Python, análisis masivo terminal.</li>
+              <li><strong>Modo Web App:</strong> interfaz interactiva (Vanilla Cyber-Noir).</li>
+              <li><strong>Modo LLM Local (Cloud OpenSource):</strong> Integración con infraestructura nube OpenSource, operando 100% aislado.</li>
+            </ul>
+            <div style="padding: 10px; background: rgba(20, 184, 166, 0.1); border-left: 3px solid var(--accent-teal); font-weight: bold; color: var(--accent-teal);">
+              No depende de la nube corporativa. No depende de Google. No depende de nadie.<br><br>
+              <em>"No necesitas permiso para saber la verdad. Solo necesitas las herramientas adecuadas. Creemos que el conocimiento es para toda la humanidad, no un privilegio de quienes asumen que el capital puede suplir la falta de inteligencia, sentido común o dignidad."</em>
+            </div>
+          </div>
+        </div>
+      </div>
+
     </section>
 
     <!-- Tab 2: Narrative "Siguiendo la Anomalía" -->
@@ -905,20 +952,32 @@
           </thead>
           <tbody>
             <tr>
+              <td><strong>FBI Cyber Division (IC3)</strong></td>
+              <td><code style="color: var(--accent-cyan);">eaf1ae6479c64d31af0375faece4b751</code></td>
+              <td>09/2026</td>
+              <td>Investigación Federal Activa (APT Cyberattack)</td>
+            </tr>
+            <tr>
+              <td><strong>Fiscalía General de la Nación (FGN)</strong></td>
+              <td><code style="color: var(--accent-cyan);">SPOA 110016000049202651911</code></td>
+              <td>09/2026</td>
+              <td>Denuncia Transnacional - Alteración Electoral</td>
+            </tr>
+            <tr>
               <td><strong>CIDH (OEA)</strong></td>
-              <td><code>[CONFIDENCIAL — VER CHRIS COMMAND]</code></td>
+              <td><code style="color: var(--accent-cyan);">IACHR-0000113728</code></td>
               <td>29/06/2026</td>
               <td>Medidas Cautelares a favor del núcleo familiar</td>
             </tr>
             <tr>
               <td><strong>Assurant / ExpressVPN</strong></td>
-              <td><code>Claim ID: [REST-ID-REDACTED]</code></td>
-              <td>24/08/2026</td>
-              <td>Identity Defender $3M USD Policy (Restoration ID: [REST-ID-REDACTED])</td>
+              <td><code>Claim ID: 00115536906</code></td>
+              <td>08/2026</td>
+              <td>Identity Defender $3M USD Policy (Restoration ID: 85720870)</td>
             </tr>
             <tr>
               <td><strong>Lenovo Official Support</strong></td>
-              <td><code>Key Ref: [TICKET-LENOVO-REDACTED]</code></td>
+              <td><code>Key Ref: 2031621994</code></td>
               <td>Pos-20/06/2026</td>
               <td>Certificado oficial de bloqueo BIOS por Rootkit</td>
             </tr>
@@ -1140,9 +1199,9 @@
       </div>
     </section>
 
-    <!-- Tab 5.8: Chris Command Dashboard (Native English) -->
+    <!-- Tab 5.8: Michael Command Dashboard (Native English) -->
     <section id="tab-chris" class="tab-content">
-      <h2 class="section-title">🛡️ Security Command Center — Chris Baez (US)</h2>
+      <h2 class="section-title">🛡️ Security Command Center — Michael Baez (US)</h2>
       <p style="color: var(--text-muted); font-size: 1.05rem; margin-bottom: 24px;">
         Family Self-Defense Command, Telecom Security Management (T-Mobile US) & Tactical Quartermaster.
       </p>
@@ -1197,7 +1256,7 @@
       <div class="content-card" style="margin-top: 24px; text-align: center; background: linear-gradient(135deg, rgba(15, 23, 42, 0.9), rgba(168, 85, 247, 0.2)); border-color: var(--accent-purple);">
         <h3 style="color: var(--accent-purple); font-size: 1.3rem;">❤️ Recognition & Family Defense Support</h3>
         <p style="color: var(--text-main); font-size: 1rem; max-width: 800px; margin: 10px auto 0;">
-          "Thank you Chris for your untiring efforts, for every support call made, and for keeping the home safe. The evidence is protected, the data is immutable, and you are not alone."
+          "Thank you Michael for your untiring efforts, for every support call made, and for keeping the home safe. The evidence is protected, the data is immutable, and you are not alone."
         </p>
       </div>
     </section>
@@ -1288,7 +1347,7 @@
           <div>
             <h2 style="color: #c084fc; font-size: 1.6rem; margin: 0;">🎮 GUARDIANES DIGITALES — Juego Táctico de Ciberdefensa</h2>
             <p style="color: var(--text-muted); font-size: 0.95rem; margin-top: 6px;">
-              ¡Aprende Ciberseguridad y protege el Acervo Probatorio con <strong>Arthurios (11 años)</strong>, <strong>Chris</strong>, <strong>Tobías el perrito</strong> y el Squad!
+              ¡Aprende Ciberseguridad y protege el Acervo Probatorio con <strong>Arthurios (11 años)</strong>, <strong>Michael</strong>, <strong>Tobías el perrito</strong> y el Squad!
             </p>
           </div>
           <div style="display: flex; gap: 16px; background: rgba(2, 6, 23, 0.85); padding: 10px 18px; border-radius: 8px; border: 1px solid #a855f7;">
@@ -1331,7 +1390,7 @@
               </button>
 
               <button onclick="playCyberDefenseTurn('ports')" class="game-shield-btn" style="background: linear-gradient(90deg, rgba(59, 130, 246, 0.2), rgba(59, 130, 246, 0.05)); border: 1px solid #60a5fa; color: #dbeafe; padding: 12px; border-radius: 8px; text-align: left; cursor: pointer; transition: 0.2s;">
-                <strong style="color: #60a5fa; display: block;">🛡️ Firewall de Chris & Tobías el perrito</strong>
+                <strong style="color: #60a5fa; display: block;">🛡️ Firewall de Michael & Tobías el perrito</strong>
                 <span style="font-size: 0.78rem; color: var(--text-muted);">Bloquea puertos de red extraños e intrusiones no autorizadas.</span>
               </button>
 
@@ -1371,6 +1430,28 @@
         <div class="content-card">
           <h3>2. La Evidencia Pertenece a la Ciencia</h3>
           <p>No es una interpretación política. Los hashes matemáticos SHA-256 y la Ley de Benford son neutros, independientes e inmodificables.</p>
+        </div>
+      </div>
+      </div>
+    </section>
+
+    <!-- Tab: Lupa Mágica (Video / Interactive) -->
+    <section id="tab-video" class="tab-content">
+      <div style="background: linear-gradient(135deg, rgba(15, 23, 42, 0.98), rgba(244, 63, 94, 0.18)); border: 2px solid #f43f5e; border-radius: 12px; padding: 24px; box-shadow: 0 0 30px rgba(244, 63, 94, 0.35); margin-bottom: 24px;">
+        <div style="display: flex; justify-content: space-between; align-items: center; flex-wrap: wrap; gap: 12px; border-bottom: 1px solid rgba(244, 63, 94, 0.3); padding-bottom: 14px;">
+          <div>
+            <h2 id="video-episode-title" style="color: #fb7185; font-size: 1.6rem; margin: 0;">🎬 ANDRETAKER Y SU LUPA MÁGICA</h2>
+            <p id="video-episode-subtitle" style="color: var(--text-muted); font-size: 0.95rem; margin-top: 6px;">
+              Cargando escenas...
+            </p>
+          </div>
+          <div style="display: flex; gap: 16px; background: rgba(2, 6, 23, 0.85); padding: 10px 18px; border-radius: 8px; border: 1px solid #f43f5e;">
+            <div><span style="color: var(--text-muted); font-size: 0.75rem; display: block;">PROTAGONISTA</span> <strong id="video-character" style="color: #fb7185; font-size: 1.1rem;">-</strong></div>
+          </div>
+        </div>
+
+        <div id="video-scenes-container" style="display: grid; grid-template-columns: repeat(auto-fit, minmax(320px, 1fr)); gap: 20px; margin-top: 24px;">
+          <!-- Scenes will be loaded here dynamically via JS -->
         </div>
       </div>
     </section>

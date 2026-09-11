@@ -59,7 +59,9 @@ const TRANSLATIONS = {
     card_nvme_title: "🖥️ Sistema Local / NVMe",
     card_nvme_desc: "Repositorio activo repo_github_comparacion, motor BabaYaga Core v2.1 y entorno virtual Python de auditoría forense.",
     card_backup_title: "💽 Bóveda BACKUP",
-    card_backup_desc: "Paquete comprimido primario Junio-1-001 (1.62 GB), capturas de alertas ExpressVPN Identity Defender (ID [REST-ID-REDACTED]) y resguardo de seguridad."
+    card_backup_desc: "Paquete comprimido primario Junio-1-001 (1.62 GB), capturas de alertas ExpressVPN Identity Defender (ID [REST-ID-REDACTED]) y resguardo de seguridad.",
+    card_drive_title: "☁️ Espejo Cloud (Google Drive)",
+    card_drive_desc: "Bóveda espejo en la nube. Contiene los respaldos de Google Takeout, testigos digitales sincronizados y repositorios de respaldo forense para el escuadrón."
   },
   en: {
     nav_overview: "Overview & Scale",
@@ -119,7 +121,9 @@ const TRANSLATIONS = {
     card_nvme_title: "🖥️ Local NVMe Workstation",
     card_nvme_desc: "Active repo_github_comparacion repository, BabaYaga Core v2.1 forensic engine, and Python virtual forensic environment.",
     card_backup_title: "💽 Bóveda BACKUP",
-    card_backup_desc: "Primary compressed bundle Junio-1-001 (1.62 GB), ExpressVPN Identity Defender alert logs (ID [REST-ID-REDACTED]), and emergency security mirror."
+    card_backup_desc: "Primary compressed bundle Junio-1-001 (1.62 GB), ExpressVPN Identity Defender alert logs (ID [REST-ID-REDACTED]), and emergency security mirror.",
+    card_drive_title: "☁️ Cloud Mirror (Google Drive)",
+    card_drive_desc: "Cloud mirror vault. Contains Google Takeout backups, synchronized digital witnesses, and forensic backup repositories for the squad."
   },
   fr: {
     nav_overview: "Aperçu & Échelle",
@@ -179,7 +183,9 @@ const TRANSLATIONS = {
     card_nvme_title: "🖥️ Station Locale NVMe",
     card_nvme_desc: "Répertoire actif repo_github_comparacion, moteur légal BabaYaga Core v2.1 et environnement virtuel d'expertise forensique.",
     card_backup_title: "💽 Coffre BACKUP",
-    card_backup_desc: "Archive compressée primaire Junio-1-001 (1,62 Go), alertes ExpressVPN Identity Defender (ID [REST-ID-REDACTED]) et miroir de sécurité d'urgence."
+    card_backup_desc: "Archive compressée primaire Junio-1-001 (1,62 Go), alertes ExpressVPN Identity Defender (ID [REST-ID-REDACTED]) et miroir de sécurité d'urgence.",
+    card_drive_title: "☁️ Miroir Cloud (Google Drive)",
+    card_drive_desc: "Coffre-fort miroir dans le cloud. Contient les sauvegardes Google Takeout, les témoins numériques synchronisés et les dépôts de sauvegarde forensique pour l'escouade."
   }
 };
 
@@ -1170,4 +1176,44 @@ document.addEventListener('DOMContentLoaded', () => {
       responseEl.innerHTML = answer;
     }, 800);
   };
+
+  // 🎬 CARGA DE VIDEO INTERACTIVO LUPA MÁGICA
+  const loadVideoEpisodes = async () => {
+    try {
+      const response = await fetch('assets/data/episodio_01.json');
+      if (!response.ok) throw new Error('Network response was not ok');
+      const data = await response.json();
+      
+      const titleEl = document.getElementById('video-episode-title');
+      const subTitleEl = document.getElementById('video-episode-subtitle');
+      const charEl = document.getElementById('video-character');
+      const container = document.getElementById('video-scenes-container');
+      
+      if (titleEl) titleEl.innerHTML = (data.episodeTitle || data.title) + ' <span style="background: rgba(234, 179, 8, 0.2); color: #fde047; font-size: 0.6em; border: 1px solid #eab308; padding: 4px 10px; border-radius: 6px; vertical-align: middle; margin-left: 10px;">🚧 EN PRODUCCIÓN</span>';
+      if (subTitleEl) subTitleEl.innerText = data.footerNotice || '';
+      if (charEl) charEl.innerText = data.character.name + ' - ' + data.character.role;
+      
+      if (container && data.scenes) {
+        let html = `
+          <div style="grid-column: 1 / -1; background: rgba(234, 179, 8, 0.15); border: 1px dashed #eab308; padding: 16px; border-radius: 8px; text-align: center; color: #fde047; font-weight: 800; margin-bottom: 10px;">
+            ⚠️ NOTA FORENSE: Este video se encuentra actualmente en fase de producción (Renderizando). A continuación, presentamos el Storyboard confidencial y el guión técnico en desarrollo.
+          </div>
+        `;
+        html += data.scenes.map(scene => `
+          <div style="background: rgba(2, 6, 23, 0.9); border: 2px solid var(--accent-red); border-radius: 10px; padding: 20px; box-shadow: 0 0 20px rgba(239, 68, 68, 0.15);">
+            <span style="background: rgba(244, 63, 94, 0.2); color: #fb7185; font-weight: bold; padding: 4px 10px; border-radius: 12px; font-size: 0.75rem; border: 1px solid #f43f5e;">ESCENA ${scene.episodeNumber}.${scene.id.split('-')[1]} • ${scene.estimatedSeconds}s</span>
+            <h3 style="color: #fb7185; font-size: 1.1rem; margin-top: 12px; margin-bottom: 8px;">${scene.partTitle}</h3>
+            <p style="color: var(--text-muted); font-size: 0.85rem; margin-bottom: 8px; font-style: italic;">Pose: ${scene.characterPose} | Efecto: ${scene.visualEffect}</p>
+            <p style="color: #cbd5e1; font-size: 0.9rem; line-height: 1.5; background: rgba(0,0,0,0.4); padding: 10px; border-radius: 6px; border-left: 3px solid #fb7185;">"${scene.narrationText}"</p>
+          </div>
+        `).join('');
+        container.innerHTML = html;
+      }
+    } catch (e) {
+      console.error('Error loading video episodes:', e);
+    }
+  };
+
+  // Llama a la carga inicial
+  loadVideoEpisodes();
 });

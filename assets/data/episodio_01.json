@@ -1,0 +1,145 @@
+{
+  "title": "Andretaker y su Lupa Mágica",
+  "episodeTitle": "ANDRETAKER Y SU LUPA MÁGICA | EPISODIO 1",
+  "authorUrl": "forensics.andretaker.org",
+  "footerNotice": "● LABORATORIO FORENSE INDEPENDIENTE - CADENA DE CUSTODIA SHA-256",
+  "defaultBlueTheme": "royal",
+  "character": {
+    "name": "ANDRETAKER",
+    "role": "Investigadora Forense Digital",
+    "normalImageUrl": "/andretaker_normal.jpg",
+    "smileImageUrl": "/andretaker_smile.jpg",
+    "scale": 1
+  },
+  "scenes": [
+    {
+      "id": "escena-1",
+      "episodeNumber": 1,
+      "partTitle": "Introducción: Andretaker y la Lupa Mágica",
+      "narrationText": "Hola, mi nombre es Andretaker. Soy una investigadora forense que investiga las huellas digitales de los archivos y los datos. Esta es mi lupa. Está equipada con rayos X para detectar anomalías y errores en los archivos.",
+      "estimatedSeconds": 16,
+      "characterPose": "hablando",
+      "visualEffect": "scanning_rows",
+      "lupaTarget": {
+        "x": 48,
+        "y": 42,
+        "radius": 36,
+        "highlightRow": 0
+      }
+    },
+    {
+      "id": "escena-2",
+      "episodeNumber": 1,
+      "partTitle": "El Formulario E-14 y las anomalías de votación",
+      "narrationText": "El primero de junio de 2026, después de la primera vuelta electoral, mi lupa y yo encontramos varias anomalías en los documentos PDF que se subieron al portal de la Registraduría, los cuales tienen el conteo de votos de todos los ciudadanos colombianos que fueron a votar... tanto a nivel nacional como en el extranjero.",
+      "estimatedSeconds": 22,
+      "characterPose": "senalando",
+      "visualEffect": "detect_anomaly",
+      "lupaTarget": {
+        "x": 62,
+        "y": 35,
+        "radius": 40,
+        "highlightRow": 1
+      }
+    },
+    {
+      "id": "escena-3",
+      "episodeNumber": 1,
+      "partTitle": "Laboratorio Forense y Cadena de Custodia ISO",
+      "narrationText": "Pues bien, lo primero que encontramos mi lupa y yo, y ojo aquí: nosotros jamás tocamos ni un solo pelito de la página oficial. Todo el trabajo se hizo en nuestro laboratorio con registro ISO, para asegurar que nadie, ni siquiera yo, pueda cambiar nada de eso que ellos pusieron ahí.",
+      "estimatedSeconds": 23,
+      "characterPose": "sonriendo",
+      "visualEffect": "iso_custody",
+      "lupaTarget": {
+        "x": 50,
+        "y": 50,
+        "radius": 44
+      }
+    },
+    {
+      "id": "escena-4",
+      "episodeNumber": 1,
+      "partTitle": "El primer hallazgo: Páginas de más en el PDF",
+      "narrationText": "¡Ah, cierto! El primer hallazgo: cuando abrimos el archivo PDF en nuestro laboratorio, nos dimos cuenta de que adentro tenían unas páginas de más. Sí, en lugar de ser tres páginas, algunas de ellas contenían páginas completamente en blanco. ¿Cómo lo vimos? Fácil, con un programa que divide todas las imágenes que hay en un PDF, sacando por ejemplo todas las fotografías y páginas que están allí adentro.",
+      "estimatedSeconds": 28,
+      "characterPose": "explicando",
+      "visualEffect": "split_pages",
+      "lupaTarget": {
+        "x": 65,
+        "y": 60,
+        "highlightRow": 3,
+        "isRevealingGhostPages": true
+      }
+    },
+    {
+      "id": "escena-5",
+      "episodeNumber": 1,
+      "partTitle": "¿Páginas fantasma como Casper?",
+      "narrationText": "Después, mi lupa y yo quisimos saber qué eran esas páginas en blanco y por qué estaban allí escondidas. Sí, escondidas porque el contador de las hojitas del PDF no decía que estaban ahí... ¿Un fantasma blanco como Casper tal vez?",
+      "estimatedSeconds": 20,
+      "characterPose": "sonriendo",
+      "visualEffect": "ghost_pages",
+      "lupaTarget": {
+        "x": 50,
+        "y": 52,
+        "isRevealingGhostPages": true
+      }
+    },
+    {
+      "id": "escena-6",
+      "episodeNumber": 1,
+      "partTitle": "El contador interno: 6 páginas en vez de 3",
+      "narrationText": "¿Por qué decimos que eran fantasmitas? Pues porque el contador del archivo interno nos decía que ese archivo PDF, en lugar de tener tres hojitas, tenía seis... ¡y ahí aparecieron!",
+      "estimatedSeconds": 16,
+      "characterPose": "senalando",
+      "visualEffect": "detect_anomaly",
+      "lupaTarget": {
+        "x": 45,
+        "y": 40,
+        "highlightRow": 1,
+        "isRevealingGhostPages": true
+      }
+    },
+    {
+      "id": "escena-7",
+      "episodeNumber": 1,
+      "partTitle": "Las Mascaritas: El truco de las capas transparentes",
+      "narrationText": "Bueno, mi lupita y yo quisimos saber qué eran esos fantasmitas... ¿Sabes qué encontramos? Que no eran fantasmitas después de todo, sino que eran unas mascaritas... Sí, como cuando te pones una máscara para tu disfraz: eran mascaritas transparentes hechas para esas hojitas. Por eso nuestra lupa al principio las veía blancas.",
+      "estimatedSeconds": 26,
+      "characterPose": "explicando",
+      "visualEffect": "mask_reveal",
+      "lupaTarget": {
+        "x": 55,
+        "y": 45,
+        "isRevealingMask": true
+      }
+    },
+    {
+      "id": "escena-8",
+      "episodeNumber": 1,
+      "partTitle": "Indetectable para el lector de rayos X del código QR",
+      "narrationText": "Pero, ¿para qué ponerle disfraces a unas páginas de votos? ¿Qué había detrás de esas mascaritas? Mi lupita y yo quisimos averiguarlo. Fue entonces cuando encontramos que los archivos que tenían esas mascaritas eran indetectables para el lector de rayos X de los códigos QR. Simplemente estaban escondidas tras su disfraz.",
+      "estimatedSeconds": 25,
+      "characterPose": "senalando",
+      "visualEffect": "qr_xray",
+      "lupaTarget": {
+        "x": 75,
+        "y": 25,
+        "isQrScanning": true
+      }
+    },
+    {
+      "id": "escena-9",
+      "episodeNumber": 1,
+      "partTitle": "Desenlace y Avance: Segunda Vuelta 2026",
+      "narrationText": "¡No vas a creer lo que mi lupa y yo encontramos en los archivos de la segunda vuelta! Estate atento a la segunda parte para que descubramos junto a mi lupita y yo qué hicieron con los votos en Colombia en el 2026.",
+      "estimatedSeconds": 16,
+      "characterPose": "sonriendo",
+      "visualEffect": "preview_part2",
+      "lupaTarget": {
+        "x": 50,
+        "y": 50
+      }
+    }
+  ]
+}

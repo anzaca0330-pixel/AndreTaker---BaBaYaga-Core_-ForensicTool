@@ -18,6 +18,10 @@ Empirical mathematical proof of *#BlindM​​asking* (injection of monochromati
 • *Attorney General's Office (Fiscalía):* Docket `2026306002309711` (Control `358660` — Assigned to Investigator Karen Yineth Rodriguez Millan).
 • *National Electoral Council (CNE):* Docket `CNE-E-DG-2026-021378` / `022140` (Order `CNE-FMG-348-2026` by Magistrate Márquez Grisales).
 • *URIEL (Ministry of Interior):* Docket `RAD-2026-0007233-URI` (Certified transfer to Fiscalía & National Registry).
+• *Inter-American Commission on Human Rights (IACHR/OAS):* Docket `[CONFIDENTIAL — SEE CHRIS COMMAND]` (Precautionary measures requested — case file under Legal Coordinator custody).
+
+🚨 *LATEST FINDINGS (September 10, 2026):*
+Ongoing forensic analysis of the evidentiary mass (>677 GB). Most recent findings include SHA-256 metrological integrity verification across 121,960 raw Delegates' PDF ballots and confirmation of phantom XREF deltas (+2) in random samples from the preliminary count. Full technical details available at the repository: https://www.andretaker.org
 
 📦 *Public Download Center (Raw PDFs, Criminal Complaints & Forensic Brief):*
 👉 https://forensics.andre​​taker.org/fra​​ude_elec​​toral_colo​​mbia.html

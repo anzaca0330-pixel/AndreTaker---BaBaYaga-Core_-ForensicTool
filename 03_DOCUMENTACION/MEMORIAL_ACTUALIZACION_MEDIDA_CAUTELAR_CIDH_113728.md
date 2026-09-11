@@ -8,7 +8,7 @@
 
 * **EXPEDIENTE / CASE REFERENCE:** `IACHR - 0000113728` (Medida Cautelar / Precautionary Measure)
 * **FECHA DE RADICACIÓN INICIAL / INITIAL FILING DATE:** 29 de junio de 2026 (18:51 hrs UTC-4) / June 29, 2026
-* **FECHA DE ACTUALIZACIÓN FORMAL / FORMAL UPDATE DATE:** 7 de septiembre de 2026 / September 7, 2026
+* **FECHA DE ACTUALIZACIÓN FORMAL / FORMAL UPDATE DATE:** 11 de septiembre de 2026 / September 11, 2026
 * **PETICIONARIA Y BENEFICIARIA PRINCIPAL / LEAD PETITIONER & BENEFICIARY:**  
   **Andrea Zabala Cárcamo (AnZaCa / AndreTaker)**  
   *Investigadora Forense Digital, Auditora de Sistemas Electorales y Defensora de Derechos Humanos (C.C. 43.925.102 Colombia).*
@@ -47,11 +47,11 @@ La peticionaria comparece formalmente ante la Comisión Interamericana de Derech
 
 Se ratifica en su totalidad el escrito matriz radicado el **29 de junio de 2026 a las 18:51 hrs** bajo el código **`IACHR - 0000113728`**, reiterando la secuencia fáctica cronológica:
 
-1. **Radicación de Denuncias Oficiales en Colombia desde Virginia (Principios de Junio 2026):** Estando en su residencia en Virginia, Andrea Zabala radicó formalmente denuncias por alteración documental y falsedad ideológica en documento público ante la Fiscalía General de la Nación, CNE, Procuraduría, URIEL y MOE (Denuncia del 2 de junio de 2026).
+1. **Radicación de Denuncias Oficiales en Colombia desde Virginia (Principios de Junio 2026):** Estando en su residencia en Virginia, Andrea Zabala radicó formalmente denuncias por alteración documental y falsedad ideológica en documento público ante la Fiscalía General de la Nación, CNE, Procuraduría, URIEL y MOE (Denuncia del 2 de junio de 2026, **SPOA NUNC 110016000049202651911**).
 2. **Despliegue Inmediato de Represalias en Territorio Estadounidense (8 al 13 de Junio de 2026):** Apenas se tuvo constancia formal de las denuncias en Colombia, se activaron ataques coordinados contra su hogar en Virginia:
    * **Infección por Rootkit persistente a nivel de BIOS en portátiles Lenovo** (bloqueo físico de hardware certificado por el soporte técnico de Lenovo).
    * **Sabotaje electrónico vehicular (13 de junio de 2026, 11:01 PM)** mediante alteración del puerto OBD-II, generando una falla crítica del sistema eléctrico del auto, llamada al 911 y apertura del radicado **`Incident C20260617-0024-01`** ante la *Buckingham County Sheriff's Office*.
-   * **Comparecencia presencial ante la sede del FBI en Richmond, Virginia** y radicación en el portal federal IC3.
+   * **Comparecencia presencial ante la sede del FBI en Richmond, Virginia** y radicación en el portal federal IC3. Con fecha 11 de septiembre de 2026, se elevó la radicación final de la alerta APT y sabotaje de hardware (**Submission ID: eaf1ae6479c64d31af0375faece4b751**).
 
 ---
 
@@ -71,7 +71,10 @@ Vulneración a la cuenta de T-Mobile USA (`102510185`) en Virginia con la **acti
 ### 4. Sabotaje en CDMX y Rescate SATA (15 de Julio de 2026)
 Ataque de corte de energía USB en early-boot en México, neutralizado mediante Live CD en bus SATA e inyección de entropía en teclado (`backup_20260715_1421.zip`).
 
-### 5. Desplazamiento Definitivo y Asilo Político en Canadá (Septiembre 2026)
+### 5. Correlación de Infraestructura Proxy (Evidencia APT)
+El análisis forense de los metadatos de Google Takeout del menor de edad, cruzado con las intrusiones a las cuentas profesionales de la investigadora, reveló un secuestro de sesión (*Token Hijacking*) utilizando las mismas subredes proxy comerciales para atacar a ambos miembros de la familia: Nodos en **Virginia (IP 216.126.34.2, AS397005)** y **Los Ángeles (IP 216.24.210.97, Ipxo LLC)**.
+
+### 6. Desplazamiento Definitivo y Asilo Político en Canadá (Septiembre 2026)
 Ante el fundado terror por los atentados en Virginia y la falta de protección efectiva, **la familia tomó la decisión irrevocable de no retornar a EE.UU. ni a Colombia**, encontrándose actualmente en trámite formal de **Asilo Político y Asentamiento Permanente** ante el *Immigration and Refugee Board of Canada (IRB)*.
 
 ---
@@ -98,7 +101,7 @@ Con fundamento en el Artículo 25 del Reglamento de la CIDH, la Declaración Ame
 ---
 
 **En testimonio de verdad, dignidad humana y rigor forense inmutable.**  
-Radicado en fecha 7 de Septiembre de 2026.
+Radicado en fecha 11 de Septiembre de 2026.
 
 **Andrea Zabala Cárcamo (AnZaCa / AndreTaker)**  
 *Investigadora Forense Principal — C.C. 43.925.102*  

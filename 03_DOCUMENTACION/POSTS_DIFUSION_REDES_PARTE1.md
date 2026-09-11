@@ -14,10 +14,14 @@ Comparto con la ciudadanía, veedurías, juristas y medios de comunicación el a
 🔬 *Descubrimiento Científico (Andrea Zabala Cárcamo - AnZaCa):*
 Demostración técnica de la inyección de capas monocromáticas *#BlindM​​asking* (1bpc #FFFFFF) en los streams `/FlateDecode` de los PDFs oficiales para tapar votos manuscritos reales, códigos QR sintéticos con divergencia textual y alteración progresiva de versiones V1 a V4.
 
-⚖️ *Radicados Oficiales Activos (Semana del 1 al 10 de Junio de 2026):*
-• *Fiscalía General:* Rad. `2026306002309711` (Control `358660` — Asignado a investigadora Karen Yineth Rodriguez Millan).
-• *CNE:* Rad. `CNE-E-DG-2026-021378` / `022140` (Oficio `CNE-FMG-348-2026` Despacho Magistrada Márquez Grisales).
-• *URIEL MinInterior:* Rad. `RAD-2026-0007233-URI` (Certificado traslado a Fiscalía y Registraduría).
+⚖️ *Radicados Judiciales Oficiales Activos (Denuncias Junio 1-10, 2026):*
+• *Fiscalía General de la Nación:* Radicado `2026306002309711` (Control `358660` — Asignado a la Investigadora Karen Yineth Rodriguez Millan).
+• *Consejo Nacional Electoral (CNE):* Radicado `CNE-E-DG-2026-021378` / `022140` (Auto `CNE-FMG-348-2026` Magistrada Márquez Grisales).
+• *URIEL (MinInterior):* Radicado `RAD-2026-0007233-URI` (Traslado certificado a Fiscalía y Registraduría).
+• *Comisión Interamericana de Derechos Humanos (CIDH/OEA):* Radicado `[CONFIDENCIAL — VER CHRIS COMMAND]` (Medidas cautelares solicitadas — expediente en custodia del Coordinador Legal).
+
+🚨 *ÚLTIMOS HALLAZGOS (Septiembre 10, 2026):*
+Análisis forense continuo sobre la masa probatoria (>677 GB). Los hallazgos más recientes incluyen la verificación metrológica de integridad SHA-256 sobre las 121.960 actas PDF de delegados y la confirmación de deltas XREF fantasma (+2) en muestras aleatorias del preconteo. Detalles técnicos completos disponibles en el repositorio: https://www.andretaker.org
 
 📦 *Centro de Descarga Pública (PDFs originales, Denuncia Penal y Dictamen):*
 👉 https://www.andre​​taker.org/fra​​ude_elec​​toral_colo​​mbia.html
